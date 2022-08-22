@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+console.log("running");
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -16,7 +17,7 @@ const puppeteer = require("puppeteer");
     });
   
   
-    const text = data.html
+    const text = data.text
 
     function extractEmails ( text ){
       return text.match(/([a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9_-]+)/gi);
